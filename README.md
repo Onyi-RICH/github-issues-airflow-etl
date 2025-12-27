@@ -16,13 +16,13 @@ This project demonstrates how to design, debug, and operate a real-world ETL sys
 
 ---
 
-## TL;DR – How to Run This Project
+## TL;DR – How to Run This Project (bash / powershell)
 
-```bash
+```
 git clone https://github.com/Onyi-RICH/github-issues-airflow-etl
 cd github-issues-airflow-etl
 docker compose up --build
-
+```
 ---
 ## Table of Contents
 
@@ -94,6 +94,7 @@ Idempotent Load (Postgres)
 Watermark Update
    ↓
 Airflow Dataset → Downstream DAGs
+
 ```
 
 **Key idea:**
@@ -141,6 +142,7 @@ github-issues-airflow-etl/
 ├── test_db_load.py                  # Issue ETL validation
 ├── test_repo_load.py                # Repository ETL validation
 └── DAG_README.md                    # Full project documentation
+
 ```
 
 ---
@@ -233,6 +235,7 @@ Works the same in:
 ```sql
 CREATE UNIQUE INDEX idx_detail_node_id
 ON github_source_data.real_github_issues(detail_node_id);
+
 ```
 
 **Why B‑Tree?**
